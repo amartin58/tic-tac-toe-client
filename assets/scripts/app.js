@@ -1,7 +1,5 @@
 'use strict'
 
-const config = require('./.../config')
-const store = require('./store')
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 const gameEvents = require('./game/events')
@@ -10,5 +8,6 @@ const gameEvents = require('./game/events')
 
 $(() => {
   $('#sign-up').on('submit', gameEvents.onSignUp)
+  $('#sign-in').on('submit', gameEvents.onSignIn)
 
 })
