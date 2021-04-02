@@ -39,8 +39,10 @@ const onChangePasswordFailure = function () {
 }
 
 const onStartGameSuccess = function () {
-  $('#message').text('Password successfully deleted')
+  $('#message').text('You are ready to play')
   $('#start-game').trigger('reset')
+  $('#start-game').show()
+    $('#game-board').show()
   // console.log(onSignInSuccess)
 }
 const onStartGameFailure = function () {

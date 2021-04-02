@@ -32,17 +32,6 @@ const signIn = function(data){
     })
   }
 
-    const startGame = function(data){
-      return $.ajax({
-        method: 'POST',
-        url: config.apiUrl + "/start-game",
-        data: data,
-        headers: {
-          Authorization: 'Bearer ' + store.user.token
-        }
-      })
-}
-
 const signOut = function(){
   return $.ajax({
     method: 'DELETE',
@@ -53,6 +42,36 @@ const signOut = function(){
     }
   })
 }
+
+
+const startGame = function(data){
+  return $.ajax({
+    method: 'POST',
+    url: config.apiUrl + "/start-game",
+    data: data,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
+// const game-board = function(data){
+//   return $.ajax({
+//     method: 'POST',
+//     url: config.apiUrl + "/start-game",
+//     data: data,
+//     headers: {
+//       Authorization: 'Bearer ' + store.user.token
+//     }
+//   })
+// }
+
+
+
+
+
+
+
 
 
 module.exports = {

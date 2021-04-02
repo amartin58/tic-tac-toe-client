@@ -34,14 +34,6 @@ const onChangePassword = function(event) {
   .catch(ui.onChangePasswordFailure)
 }
 
-
-const onStartGame = function(form) {
-  event.preventDefault()
-
-   api.startGame()
-   .then(ui.onStartGameSuccess)
-   .catch(ui.onStartGameFailure)
-}
 const onSignOut = function() {
   event.preventDefault()
 
@@ -50,8 +42,21 @@ const onSignOut = function() {
    .catch(ui.onSignOutFailure)
 }
 
+const onStartGame = function() {
+ event.preventDefault()
+const firstPlayer = $('#box-one').text(X)
+  api.startGame()
+  .then(ui.onStartGameSuccess)
+  .catch(ui.onStartGameFailure)
+}
 
-
+// const onGameBoard = function() {
+//   event.preventDefault()
+// // console.log(onGameBoard())
+//    api.gameBoard()
+//    .then(ui.onGameBoardSuccess)
+//    .catch(ui.onGameBoardFailure)
+// }
 
 module.exports = {
   onSignUp,
