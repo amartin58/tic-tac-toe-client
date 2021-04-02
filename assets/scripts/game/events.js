@@ -35,10 +35,22 @@ const onChangePassword = function(event) {
 }
 
 
+const onStartBtn = function(event) {
+  event.prevent()
+
+   api.startBtn
+   .then(ui.onStartBtnSuccess)
+   .catch(ui.onStartBtnFailure)
+
+}
+
+
+
 
 
 module.exports = {
   onSignUp,
   onSignIn,
-  onChangePassword
+  onChangePassword,
+  onStartGame
 }

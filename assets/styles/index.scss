@@ -1,1 +1,51 @@
 @import '~bootstrap/scss/bootstrap';
+body {
+  background-color: gray;
+}
+
+// use sass
+.box-one {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
+.box-two {
+  width: 200px;
+  height: 200px;
+  background-color: green;
+}
+.box-three {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}
+.box-four {
+  width: 200px;
+  height: 200px;
+  background-color: lightblue;
+}
+.box-five {
+  width: 200px;
+  height: 200px;
+  background-color: lavender;
+}
+.box-six {
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+}
+.box-seven {
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+}
+.box-eight {
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+}
+.box-nine {
+  width: 200px;
+  height: 200px;
+  background-color: blue;
+}

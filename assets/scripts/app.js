@@ -9,5 +9,6 @@ const gameEvents = require('./game/events')
 $(() => {
   $('#sign-up').on('submit', gameEvents.onSignUp)
   $('#sign-in').on('submit', gameEvents.onSignIn)
+  $('#start-btn').on('click', gameEvents.onStartGame)
 
 })

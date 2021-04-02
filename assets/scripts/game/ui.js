@@ -16,9 +16,11 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text(response.user.email + ' You are signed in. You can begin playing').hide()
   $('#sign-in').trigger('reset')
+  $('#start-btn').hide()
   $('#change.password').show()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#start-btn').show()
 
 }
 const onSignInFailure = function () {
@@ -34,6 +36,14 @@ const onChangePasswordFailure = function () {
   $('#message').text('Delete failed. Please retry')
 }
 
+const onStartBtnSuccess = function () {
+  $('#message').text('Password successfully deleted')
+  $('#change-password').trigger('reset')
+  // console.log(onSignInSuccess)
+}
+const onStartBtnFailure = function () {
+  $('#message').text('Delete failed. Please retry')
+}
 
 
 module.exports = {
@@ -42,5 +52,7 @@ module.exports = {
   onSignInSuccess,
   onSignInFailure,
   onChangePasswordSuccess,
-  onChangePasswordFailure
+  onChangePasswordFailure,
+  onStartBtnSuccess,
+  onStartBtnFailure
 }

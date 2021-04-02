@@ -30,7 +30,27 @@ const signIn = function(data){
         Authorization: 'Bearer ' + store.user.token
       }
     })
+
+    const startBtn = function(){
+      return $.ajax({
+        method: 'POST',
+        url: config.apiUrl + "/start-btn",
+        data: data,
+        headers: {
+          Authorization: 'Bearer ' + store.user.token
+        }
+      })
+
+
   }
+
+
+
+
+
+
+
+
 
 
 
