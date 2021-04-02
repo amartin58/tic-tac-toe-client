@@ -30,8 +30,9 @@ const signIn = function(data){
         Authorization: 'Bearer ' + store.user.token
       }
     })
+  }
 
-    const startBtn = function(){
+    const startBtn = function(data){
       return $.ajax({
         method: 'POST',
         url: config.apiUrl + "/start-btn",
@@ -40,22 +41,12 @@ const signIn = function(data){
           Authorization: 'Bearer ' + store.user.token
         }
       })
-
-
-  }
-
-
-
-
-
-
-
-
-
+}
 
 
 module.exports = {
   signUp,
   signIn,
-  changePassword
+  changePassword,
+  // startBtn
 }
