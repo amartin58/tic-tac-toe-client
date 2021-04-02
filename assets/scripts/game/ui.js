@@ -5,7 +5,10 @@ const store = require('./../store')
 const onSignUpSuccess = function () {
   $('#message').text("Your sign up was successful")
   $('#sign-up').trigger('reset')
-  // $('#sign-up').hide()
+  // $('#change-password').show()
+  // $('#start-btn').hide()
+  // $('#start-btn').hide()
+
   // console.log(onSignUpSuccess)
 }
 const onSignUpFailure = function () {
@@ -14,13 +17,13 @@ const onSignUpFailure = function () {
 
 const onSignInSuccess = function (response) {
   store.user = response.user
-  $('#message').text(response.user.email + ' You are signed in. You can begin playing').hide()
+  $('#message').text(response.user.email + ' You are signed in. You can begin playing')
   $('#sign-in').trigger('reset')
-  $('#start-btn').hide()
-  $('#change.password').show()
-  $('#sign-up').hide()
-  $('#sign-in').hide()
-  $('#start-btn').show()
+  $('#change-password').showgit add()
+  // $('#sign-up').hide()
+  // $('#sign-in').hide()
+  // $('#change.password').show()
+  // $('#start-btn').show()
 
 }
 const onSignInFailure = function () {
@@ -45,6 +48,17 @@ const onStartBtnFailure = function () {
   $('#message').text('Delete failed. Please retry')
 }
 
+const onSignOutSuccess = function () {
+  $('#message').text('You have logged out')
+  // $('#sign-up').show()
+  // $('#sign-in').show()
+  // $('#change.password').hide()
+  // $('#start-btn').hide
+
+}
+const onSignOutFailure = function () {
+  $('#message').text('Logout failed. Please retry')
+}
 
 module.exports = {
   onSignUpSuccess,
@@ -54,5 +68,7 @@ module.exports = {
   onChangePasswordSuccess,
   onChangePasswordFailure,
   onStartBtnSuccess,
-  onStartBtnFailure
+  onStartBtnFailure,
+  onSignOutSuccess,
+  onSignOutFailure
 }
