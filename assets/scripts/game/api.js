@@ -32,10 +32,10 @@ const signIn = function(data){
     })
   }
 
-    const startBtn = function(data){
+    const startGame = function(data){
       return $.ajax({
         method: 'POST',
-        url: config.apiUrl + "/start-btn",
+        url: config.apiUrl + "/start-game",
         data: data,
         headers: {
           Authorization: 'Bearer ' + store.user.token
@@ -43,7 +43,7 @@ const signIn = function(data){
       })
 }
 
-const onSignOut = function(){
+const signOut = function(){
   return $.ajax({
     method: 'DELETE',
     url: config.apiUrl + "/sign-out",
@@ -55,22 +55,10 @@ const onSignOut = function(){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 module.exports = {
   signUp,
   signIn,
   changePassword,
-  // startBtn
+  startGame,
+  signOut
 }

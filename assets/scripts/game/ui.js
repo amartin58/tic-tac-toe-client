@@ -5,7 +5,7 @@ const store = require('./../store')
 const onSignUpSuccess = function () {
   $('#message').text("Your sign up was successful")
   $('#sign-up').trigger('reset')
-  // $('#change-password').hide()
+  $('#change-password').hide()
   // $('#start-btn').hide()
   // $('#start-btn').hide()
   // console.log(onSignUpSuccess)
@@ -38,22 +38,22 @@ const onChangePasswordFailure = function () {
   $('#message').text('Delete failed. Please retry')
 }
 
-const onStartBtnSuccess = function () {
+const onStartGameSuccess = function () {
   $('#message').text('Password successfully deleted')
-  $('#change-password').trigger('reset')
+  $('#start-game').trigger('reset')
   // console.log(onSignInSuccess)
 }
-const onStartBtnFailure = function () {
+const onStartGameFailure = function () {
   $('#message').text('Delete failed. Please retry')
 }
 
 const onSignOutSuccess = function () {
   $('#message').text('You have logged out')
+  $('#sign-out').trigger('reset')
   // $('#sign-up').show()
-  // $('#sign-in').show()
+  // $('#sign-in').show$()
   // $('#change.password').hide()
   // $('#start-btn').hide
-
 }
 const onSignOutFailure = function () {
   $('#message').text('Logout failed. Please retry')
@@ -66,8 +66,8 @@ module.exports = {
   onSignInFailure,
   onChangePasswordSuccess,
   onChangePasswordFailure,
-  onStartBtnSuccess,
-  onStartBtnFailure,
+  onStartGameSuccess,
+  onStartGameFailure,
   onSignOutSuccess,
   onSignOutFailure
 }
