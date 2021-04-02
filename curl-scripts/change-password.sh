@@ -1,13 +1,14 @@
+#!/bin/bash
 
-curl "https://tic-tac-toe-api-production.herokuapp.com/change-password" \
+curl "https://tic-tac-toe-api-development.herokuapp.com/change-password" \
 --include \
---request "PATCH" \
---header "Authorization: Bearer ${TOKEN}"
---header "Content-Type: application/json"
+--request PATCH \
+--header "Content-Type: application/json" \
+--header "Authorization: Bearer ${TOKEN}" \
 --data '{
   "passwords": {
-  old: "'"${OLDPW}"'",
-  "password":"'"${NEWPW}"'"
+  "old": "'"${OLDPW}"'",
+  "new": "'"${NEWPW}"'"
 }
 }'
 

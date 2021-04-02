@@ -20,7 +20,6 @@ const onSignIn = function(event) {
   const data = getFormFields(form)
 
   api.signIn(data)
-
   .then(ui.onSignInSuccess)
   .catch(ui.onSignInFailure)
 }
@@ -31,7 +30,6 @@ const onChangePassword = function(event) {
   const data = getFormFields(form)
 
   api.changePassword(data)
-
   .then(ui.onChangePasswordSuccess)
   .catch(ui.onChangePasswordFailure)
 }
@@ -39,14 +37,8 @@ const onChangePassword = function(event) {
 
 
 
-
-
-
-
-
-
-
 module.exports = {
   onSignUp,
-  onSignIn
+  onSignIn,
+  onChangePassword
 }
