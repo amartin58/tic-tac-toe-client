@@ -1,51 +1,143 @@
 @import '~bootstrap/scss/bootstrap';
-body {
-  background-color: gray;
+//the following style is from the video
+.container {
+  // set the container to take up 100% of the viewport's height, so that it will
+  // scale to the entire height
+  height: 100vh;
 }
 
-// use sass
-.box-one {
-  width: 200px;
-  height: 200px;
-  background-color: red;
+.board {
+  // setting the margins to auto will make sure the left and right margins are the startGame
+  // effectively centering the board
+margin: auto;
+  // set the max size of the board to be 100% of the viewport's height
+  // -75px, so we have a buffer at the bottom
+  max-height: calc(100vh - 75px);
+  max-width: calc(100vh - 75px);
+
+// added a background, using the cats picture in the public Folder
+  background: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fblog.malwarebytes.com%2Fwp-content%2Fuploads%2F2017%2F11%2Fshutterstock_688527661-900x506.jpg&imgrefurl=https%3A%2F%2Fblog.malwarebytes.com%2Fcybercrime%2F2017%2F11%2Fof-scammers-and-cute-puppies%2F&tbnid=AlEZ0KgDiEE6wM&vet=12ahUKEwiYlvbb--LvAhViN30KHdGNAKwQMyg_egQIARBz..i&docid=4YiMYkamfpdU2M&w=900&h=506&q=puppies&ved=2ahUKEwiYlvbb--LvAhViN30KHdGNAKwQMyg_egQIARBz');
+// set backgrtount to never repeat (if the image was too small vertically)
+background-repeat: no-repeat;
+
+// set the background to take up 100% of the parent's width
+ background-size: cover;
+background-positon: center;
+
 }
-.box-two {
-  width: 200px;
-  height: 200px;
-  background-color: green;
+
+.box {
+  border-right: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  // select 3 right boxes. 3n selects every third element
+  &:nth-child(3n) {
+    border-right: 0;
+  }
+  // selects elements but starting from the end
+  // selects the last 3 elements
+
+  &:nth-last-child(-1n + 3) {
+    border-bottom: 0;
+  }
+
+  // set the minimum height for each box
+  min-height: calc(100 / 3);
+
+// center the text (x's and o's) in the tic tac toe board
+display: flex;
+
+// set the contents position along the main axis (left to right)
+justify-content: center;
+
+// set the conts position along the cross axis (top to bottom)
+align-items: center;
+
+// set the backgroun color to whith initially, we will chang it to trasparent whean a box is clicked on
+background-color: white;
+
+color: white;
+
+font-size: 15vh;
+
+text-shadow: 2px 2px rgba(0,0,0, .25);
+
+&:hover {
+  background-color: lightskyblue;
 }
-.box-three {
-  width: 200px;
-  height: 200px;
-  background-color: blue;
+
+// make sure the user cannot select our text when clicking on it
+user-select: none;
 }
-.box-four {
-  width: 200px;
-  height: 200px;
-  background-color: lightblue;
-}
-.box-five {
-  width: 200px;
-  height: 200px;
-  background-color: lavender;
-}
-.box-six {
-  width: 200px;
-  height: 200px;
-  background-color: violet;
-}
-.box-seven {
-  width: 200px;
-  height: 200px;
-  background-color: brown;
-}
-.box-eight {
-  width: 200px;
-  height: 200px;
-  background-color: yellow;
-}
-.box-nine {
-  width: 200px;
-  height: 200px;
-  background-color: blue;
-}
+
+// center the text (x's and o's) in the tic tac toe board
+//
+//
+// }
+//
+// * {
+//   box-sizing: border-box;
+// }
+//
+// body {
+//   background-color:;
+//   margin: auto 0;
+// }
+//
+// // use sass
+// .box-one {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+// .box-two {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+// .box-three {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+// .box-four {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+// .box-five {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+// .box-six {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+// .box-seven {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+// .box-eight {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+// .box-nine {
+//   width: 200px;
+//   height: 200px;
+//   background-color:
+// }
+//
+// #game-board {
+//   margin: auto;
+//   width: 500px;
+//   height: 100px;
+// }
+// #sign-in {
+// // margin: auto;
+// // width: 50%;
+// // border: 3px dotted bla
+// // padding: 2%;;
+// }

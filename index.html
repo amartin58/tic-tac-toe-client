@@ -17,14 +17,32 @@
   <h1>Tic Tac Toe</h1>
   <section>
     <p id="message" </p>
-      <!-- <h3>Sign Up</h3> -->
-    <form id="sign-up">
+
+
+    <!-- <div class="container">
+      <div class="row">
+
+
+        <form id="sign-up">
+          <input class="col-4" required name="credentials[email]" type="email" value="Email">
+          <input class="col-3" required name="credentials[password]" type="password" value="Enter password">
+          <input class="col-3" required name="credentials[password_confirmation]" type="password" value="Accepted">
+          <input type="submit" value="<= Sign-Up">
+        </form>
+
+      </div>
+    </div> -->
+
+
+
+
+    <!-- <form id="sign-up">
       <input required name="credentials[email]" type="email" value="Email">
       <input required name="credentials[password]" type="password" value="Enter password">
       <input required name="credentials[password_confirmation]" type="password" value="Accepted">
       <input type="submit" value="<= Sign-Up">
-    </form>
-    <!-- <h3>Sign In</h3> -->
+    </form> -->
+
     <form id="sign-in">
       <input required name="credentials[email]" type="email" value="Email">
       <input required name="credentials[password]" type="password" value="Password">
@@ -38,35 +56,48 @@
       <input type="submit" value="<= Change Password">
     </form>
 
-      <form>
-        <button id="start-game" type="button" class="btn btn-primary">New Game</button>
-      </form>
+    <form>
+      <button id="start-game" type="button" class="btn btn-primary">New Game</button>
+    </form>
 
-      <form>
-        <button id="sign-out" type="button" class="btn btn-primary">Sign Out</button>
-      </form>
+    <form>
+      <button id="sign-out" type="button" class="btn btn-primary">Sign Out</button>
+    </form>
 
   </section>
-<section id="game-board"
-  <div class="container">
-    <div class="row">
-      <div class="col-4 id="box-one" alt-color">1</div>
+
+  <section class="container">
+
+    <div class="row h-100 board">
+      <div class="col-4 box">X</div>
+      <div class="col-4 box">X</div>
+      <div class="col-4 box">X</div>
+
+      <div class="col-4 box">X</div>
+      <div class="col-4 box">X</div>
+      <div class="col-4 box">X</div>
+
+      <div class="col-4 box">X</div>
+      <div class="col-4 box">X</div>
+      <div class="col-4 box">X</div>
+    </div>
+
+<!-- cant mix id and class-->
+    <!-- <div class="row" id="game-board">
+      <div class="col-4 box-one">X</div>
       <div class="col-4 box-two">2</div>
       <div class="col-4 box-three">3</div>
-    </div>
 
-    <div class="row">
-      <div class="col-4 box-four alt-color">4</div>
-      <div class="col-4 col-md-4 box-five">5</div>
-      <div class="col-4 col-md-4 box-six">6</div>
-    </div>
+      <div class="col-4 box-four">4</div>
+      <div class="col-4 box-five">5</div>
+      <div class="col-4 box-six">6</div>
 
-    <div class="row">
-      <div class="col-4 box-seven alt-color">7</div>
-      <div class="col-4 col-md-4 box-eight">8</div>
-      <div class="col-4 col-md-4 box-nine">9</div>
-    </div>
-  </secton>
+      <div class="col-4 box-seven">7</div>
+      <div class="col-4 box-eight">8</div>
+      <div class="col-4 box-nine">9</div>
+    </div> -->
+
+    </secton>
 
 </body>
 
