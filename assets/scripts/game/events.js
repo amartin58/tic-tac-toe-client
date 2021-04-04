@@ -44,24 +44,32 @@ const onSignOut = function() {
 
 const onStartGame = function() {
  event.preventDefault()
-const firstPlayer = $('#box-one').text(X)
+// const firstPlayer = $('#box-one').text(X)
   api.startGame()
   .then(ui.onStartGameSuccess)
   .catch(ui.onStartGameFailure)
 }
 
-// const onGameBoard = function() {
-//   event.preventDefault()
-// // console.log(onGameBoard())
-//    api.gameBoard()
-//    .then(ui.onGameBoardSuccess)
-//    .catch(ui.onGameBoardFailure)
-// }
+const onGameBoard = function(event) {
+  event.preventDefault()
+let player = x;
+const squareClic = event.target
+// Define the square of player is on for first move. first move on whichever clicked square
+// When any button is clicked display the X
+squareClic.text(player)
+console.log(onGameBoard)
+   api.gameBoard()
+   .then(ui.onGameBoardSuccess)
+   .catch(ui.onGameBoardFailure)
+}
+
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
   onStartGame,
-  onSignOut
+  onSignOut,
+  // onFirstPlayer,
+  // onFirstPlayer
 }

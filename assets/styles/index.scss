@@ -1,79 +1,60 @@
-@import '~bootstrap/scss/bootstrap';
-//the following style is from the video
+@import '~bootstrap/scss/bootstrap'; //the following styles are from the video
+
 .container {
-  // set the container to take up 100% of the viewport's height, so that it will
-  // scale to the entire height
+  // Set container to take up 100% of the vp's height
+  // to scale to the entire height
   height: 100vh;
 }
 
 .board {
-  // setting the margins to auto will make sure the left and right margins are the startGame
-  // effectively centering the board
-margin: auto;
-  // set the max size of the board to be 100% of the viewport's height
-  // -75px, so we have a buffer at the bottom
+  // Margin to keep left at right margins the same
+  margin: auto;
+  // Set max size of board to ve 100% of viewport's max-height // -75px. for buffer at the bottom
   max-height: calc(100vh - 75px);
   max-width: calc(100vh - 75px);
-
-// added a background, using the cats picture in the public Folder
-  background: url('https://www.google.com/imgres?imgurl=https%3A%2F%2Fblog.malwarebytes.com%2Fwp-content%2Fuploads%2F2017%2F11%2Fshutterstock_688527661-900x506.jpg&imgrefurl=https%3A%2F%2Fblog.malwarebytes.com%2Fcybercrime%2F2017%2F11%2Fof-scammers-and-cute-puppies%2F&tbnid=AlEZ0KgDiEE6wM&vet=12ahUKEwiYlvbb--LvAhViN30KHdGNAKwQMyg_egQIARBz..i&docid=4YiMYkamfpdU2M&w=900&h=506&q=puppies&ved=2ahUKEwiYlvbb--LvAhViN30KHdGNAKwQMyg_egQIARBz');
-// set backgrtount to never repeat (if the image was too small vertically)
-background-repeat: no-repeat;
-
-// set the background to take up 100% of the parent's width
- background-size: cover;
-background-positon: center;
-
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSImFKKr1RuR39SorkzE9TMXW0-GheDklA5sg&usqp=CAU");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .box {
+  // Add a solid black line to the right of each, for columns
   border-right: 1px solid #000000;
   border-bottom: 1px solid #000000;
-  // select 3 right boxes. 3n selects every third element
+  // Selects 3 right boxes.
+  // 3n selects every third elememt
   &:nth-child(3n) {
     border-right: 0;
   }
-  // selects elements but starting from the end
-  // selects the last 3 elements
-
+  // Selects the last 3 elements
   &:nth-last-child(-1n + 3) {
     border-bottom: 0;
   }
+  // Set min height for each box
+  min-height: calc(100% / 3);
+  // Center text on game-board
+  display: flex;
+  justify-content: center;
+  // Set vertical
+  align-items: center;
 
-  // set the minimum height for each box
-  min-height: calc(100 / 3);
-
-// center the text (x's and o's) in the tic tac toe board
-display: flex;
-
-// set the contents position along the main axis (left to right)
-justify-content: center;
-
-// set the conts position along the cross axis (top to bottom)
-align-items: center;
-
-// set the backgroun color to whith initially, we will chang it to trasparent whean a box is clicked on
-background-color: white;
-
+// Set background to white, change to transparent on click of box
+  background-color: white;
 color: white;
 
+// make x and 0's larger
 font-size: 15vh;
 
-text-shadow: 2px 2px rgba(0,0,0, .25);
+text-shadow: 2px 2px rgba(0, 0, 0, .25);
 
 &:hover {
-  background-color: lightskyblue;
-}
+  background-color: lightblue;
+  }
 
-// make sure the user cannot select our text when clicking on it
-user-select: none;
+  user-select: none;
 }
+//
 
-// center the text (x's and o's) in the tic tac toe board
-//
-//
-// }
-//
 // * {
 //   box-sizing: border-box;
 // }

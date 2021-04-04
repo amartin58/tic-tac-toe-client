@@ -38,17 +38,6 @@ const onChangePasswordFailure = function () {
   $('#message').text('Delete failed. Please retry')
 }
 
-const onStartGameSuccess = function () {
-  $('#message').text('You are ready to play')
-  $('#start-game').trigger('reset')
-  $('#start-game').show()
-    $('#game-board').show()
-  // console.log(onSignInSuccess)
-}
-const onStartGameFailure = function () {
-  $('#message').text('Delete failed. Please retry')
-}
-
 const onSignOutSuccess = function () {
   $('#message').text('You have logged out')
   $('#sign-out').trigger('reset')
@@ -61,6 +50,23 @@ const onSignOutFailure = function () {
   $('#message').text('Logout failed. Please retry')
 }
 
+const onStartGameSuccess = function () {
+  $('#message').text('You are ready to play')
+  $('#start-game').trigger('reset')
+  $('#start-game').show()
+  // $('#game-board').show()
+  // console.log(onSignInSuccess)
+}
+const onStartGameFailure = function () {
+  $('#message').text('Delete failed. Please retry')
+}
+
+
+
+
+
+
+
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -68,8 +74,8 @@ module.exports = {
   onSignInFailure,
   onChangePasswordSuccess,
   onChangePasswordFailure,
-  onStartGameSuccess,
-  onStartGameFailure,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onStartGameSuccess,
+  onStartGameFailure
 }
