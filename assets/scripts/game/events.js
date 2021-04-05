@@ -50,15 +50,20 @@ const onStartGame = function() {
   .catch(ui.onStartGameFailure)
 }
 
-const onGameBoard = function(event) {
+// let currentPlayer = 'x'
+const onBoxClick = function(event) {
   event.preventDefault()
-let player = x;
-const squareClic = event.target
-// Define the square of player is on for first move. first move on whichever clicked square
-// When any button is clicked display the X
-squareClic.text(player)
-console.log(onGameBoard)
-   api.gameBoard()
+  // let currentPlayer = 'x'
+  // $('#game-board').hide()
+
+// selects clicked box
+    const box = $(event.target)
+
+// $(#box-one).text('X')
+
+
+
+    // currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
    .then(ui.onGameBoardSuccess)
    .catch(ui.onGameBoardFailure)
 }
@@ -70,6 +75,5 @@ module.exports = {
   onChangePassword,
   onStartGame,
   onSignOut,
-  // onFirstPlayer,
-  // onFirstPlayer
+  onBoxClick
 }

@@ -15,6 +15,5 @@ $(() => {
   $('#sign-out').on('click', gameEvents.onSignOut)
   $('#sign-out').hide()
   $('#start-game').hide()
-  $('#game-board').on('click', gameEvents.onGameBoard)
-  // $('#game-board').hide()
+  $('.box').on('click', gameEvents.onBoxClick)
 })
