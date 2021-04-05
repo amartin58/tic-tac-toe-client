@@ -53,19 +53,15 @@ const onStartGame = function() {
 // let currentPlayer = 'x'
 const onBoxClick = function(event) {
   event.preventDefault()
-  // let currentPlayer = 'x'
-  // $('#game-board').hide()
+  // let currentPlayer = 'x'  // $('#game-board').hide()
 
 // selects clicked box
-    const box = $(event.target)
-
+    // const box = $(event.target)
 // $(#box-one).text('X')
 
-
-
     // currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
-   .then(ui.onGameBoardSuccess)
-   .catch(ui.onGameBoardFailure)
+   .then(ui.onBoxClickSuccess)
+   .catch(ui.onBoxClickFailure)
 }
 
 

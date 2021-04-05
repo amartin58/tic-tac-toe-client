@@ -5,7 +5,7 @@ const store = require('./../store')
 const onSignUpSuccess = function () {
   $('#message').text("Your sign up was successful")
   $('#sign-up').trigger('reset')
-  $('#change-password').hide()
+  // $('#change-password').hide()
   // $('#start-btn').hide()
   // $('#start-btn').hide()
   // console.log(onSignUpSuccess)

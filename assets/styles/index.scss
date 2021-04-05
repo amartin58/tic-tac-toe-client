@@ -11,10 +11,10 @@
   margin: auto;
   // Set max size of board to ve 100% of viewport's max-height // -75px. for buffer at the bottom
   max-height: calc(100vh - 75px);
-  max-width: calc(100vh - 75px);
-  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSImFKKr1RuR39SorkzE9TMXW0-GheDklA5sg&usqp=CAU");
-  background-size: cover;
-  background-repeat: no-repeat;
+  min-width: calc(100vh - 75px);
+  // background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSImFKKr1RuR39SorkzE9TMXW0-GheDklA5sg&usqp=CAU");
+  // background-size: cover;
+  // background-repeat: no-repeat;
 }
 
 .box {
@@ -48,7 +48,7 @@ font-size: 15vh;
 text-shadow: 2px 2px rgba(0, 0, 0, .25);
 
 &:hover {
-  background-color: lightblue;
+  // background-color: lightblue;
   }
 
   user-select: none;
