@@ -1,5 +1,5 @@
 
-const getFormFields = require('./../../../lib/get-form-fields')
+const getFormFields = require('../../../grunt/lib/get-form-fields')
 
 const api = require('./api')
 const ui = require('./ui')
@@ -42,34 +42,64 @@ const onSignOut = function() {
    .catch(ui.onSignOutFailure)
 }
 
-const onStartGame = function() {
+const onBeginGame = function() {
  event.preventDefault()
 // const firstPlayer = $('#box-one').text(X)
-  api.startGame()
-  .then(ui.onStartGameSuccess)
-  .catch(ui.onStartGameFailure)
+  api.beginGame()
+  .then(ui.onBeginGameSuccess)
+  .catch(ui.onBeginGameFailure)
 }
 
-// let currentPlayer = 'x'
+// Video clue
+let currentPlayer = 'x'
+
+
+
 const onBoxClick = function(event) {
   event.preventDefault()
-  // let currentPlayer = 'x'  // $('#game-board').hide()
 
-// selects clicked box
-    // const box = $(event.target)
-// $(#box-one).text('X')
+// selects clicked box // add .id to target specific
+let firstPlayer = $(event.target.id)
+// console.log(event.target.id)
+let board = event.target.id
+// string concactenation putting two strings
+$('#' + board).text(currentplayer)
 
-    // currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
-   .then(ui.onBoxClickSuccess)
-   .catch(ui.onBoxClickFailure)
+
+if (box === '') {
+  firstPlayer = 'M'
 }
+
+currentPlayer === 'O' ? 'x' : 'O'
+}
+// else if (firstPlayer === "X")
+// firstPlayer = "O"
+// }
+
+
+//
+// else (firstPlayer === board) {
+//       currentPlayer = 'O'
+//
+//
+// }
+
+
+//
+// alert(currentPlayer)
+// }
+// console.log(currentPlayer)
+
+
+   // .then(ui.onBoxClickSuccess)
+   // .catch(ui.onBoxClickFailure)
 
 
 module.exports = {
   onSignUp,
   onSignIn,
   onChangePassword,
-  onStartGame,
+  onBeginGame,
   onSignOut,
   onBoxClick
 }

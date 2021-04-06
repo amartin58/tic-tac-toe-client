@@ -18,11 +18,11 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text(response.user.email + ' You are signed in. You can begin playing')
   $('#sign-in').trigger('reset')
-  // $('#change-password').show()
-  // $('#sign-up').hide()
-  // $('#sign-in').hide()
-  // $('#change.password').show()
-  // $('#start-btn').show()
+  $('#change-password').show()
+  $('#sign-up').hide()
+  $('#sign-in').hide()
+  $('#beginGame').show()
+
 
 }
 const onSignInFailure = function () {
@@ -41,30 +41,46 @@ const onChangePasswordFailure = function () {
 const onSignOutSuccess = function () {
   $('#message').text('You have logged out')
   $('#sign-out').trigger('reset')
-  // $('#sign-up').show()
-  // $('#sign-in').show$()
-  // $('#change.password').hide()
-  // $('#start-btn').hide
+  $('#sign-up').show()
+  $('#sign-in').show()
 }
 const onSignOutFailure = function () {
   $('#message').text('Logout failed. Please retry')
 }
 
-const onStartGameSuccess = function () {
+const onBeginGameSuccess = function (data) {
+  store.game = data.game
+console.log(data)
+
   $('#message').text('You are ready to play')
-  $('#start-game').trigger('reset')
-  $('#start-game').show()
-  // $('#game-board').show()
-  // console.log(onSignInSuccess)
+  // $('#beginGame').trigger('reset')
+  $('#box').show()
 }
-const onStartGameFailure = function () {
+const onBeginGameFailure = function () {
   $('#message').text('Delete failed. Please retry')
 }
 
+const onBoxClickSuccess = function (data) {
+  $('#message').text('It is your move')
+  $('#boxclick').trigger('reset')
+  store.user = data.user
+  console.log(store)
+}
+
+const onBoxClickFailure = function () {
+  $('#message').text('Delete failed. Please retry')
+
+}
 
 
-
-
+// const onBeginGameSuccess = function (data) {
+//   store.game = data.game
+//   console.log(data.game.cells)
+//   console.log(data.game.id)
+//   $('#message').text('You are ready to play')
+//   $('#beginGame').trigger('reset')
+//   $('#box').show()
+// }
 
 
 module.exports = {
@@ -76,6 +92,8 @@ module.exports = {
   onChangePasswordFailure,
   onSignOutSuccess,
   onSignOutFailure,
-  onStartGameSuccess,
-  onStartGameFailure
+  onBeginGameSuccess,
+  onBeginGameFailure,
+  onBoxClickSuccess,
+  onBoxClickFailure
 }
