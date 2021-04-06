@@ -10,10 +10,12 @@ $(() => {
   $('#sign-up').on('submit', gameEvents.onSignUp)
   $('#sign-in').on('submit', gameEvents.onSignIn)
   $('#beginGame').on('click', gameEvents.onBeginGame)
+  $('#beginGame').hide()
   $('#change-password').on('click', gameEvents.onChangePassword)
   $('#change-password').hide()
   $('#sign-out').on('click', gameEvents.onSignOut)
   $('#sign-out').hide()
-  $('#beginGame').hide()
+
   $('.box').on('click', gameEvents.onBoxClick)
+  // $('.box').hide()
 })

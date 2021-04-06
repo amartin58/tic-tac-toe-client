@@ -53,46 +53,28 @@ const onBeginGame = function() {
 // Video clue
 let currentPlayer = 'x'
 
-
-
 const onBoxClick = function(event) {
-  event.preventDefault()
-
 // selects clicked box // add .id to target specific
 let firstPlayer = $(event.target.id)
 // console.log(event.target.id)
 let board = event.target.id
 // string concactenation putting two strings
 $('#' + board).text(currentPlayer)
-
-currentPlayer === 'O' ? 'x' : 'O'
-if (box === '') {
-  currentPlayer = ''
+currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
+for (i = 0; i < board.length; i++){
+ if (currentPlayer = board[i] === ''){
+currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
+}
+// https://stackoverflow.com/questions/44491989/how-do-i-check-a-3x3-tictactoe-board-for-empty-spaces-what-i-have-so-far-is-not
+return true
 }
 
 
 }
-// else if (firstPlayer === "X")
-// firstPlayer = "O"
+//  if (currentPlayer === "X") {
+// firstPlayer =
 // }
 
-
-//
-// else (firstPlayer === board) {
-//       currentPlayer = 'O'
-//
-//
-// }
-
-
-//
-// alert(currentPlayer)
-// }
-// console.log(currentPlayer)
-
-
-   // .then(ui.onBoxClickSuccess)
-   // .catch(ui.onBoxClickFailure)
 
 
 module.exports = {

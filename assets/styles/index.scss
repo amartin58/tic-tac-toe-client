@@ -1,10 +1,29 @@
 @import '~bootstrap/scss/bootstrap'; //the following styles are from the video
 
+body {
+  background: #F8F1F1;
+  display: flex;
+}
 
+
+forms {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+p {
+
+}
 .container {
   // Set container to take up 100% of the vp's height
   // to scale to the entire height
   height: 100vh;
+  height: 400px;
+  width: 300px;
+  display: flex;
+ justify-content: center;
+ margin-top: 175px;
 }
 
 .board {
@@ -55,6 +74,34 @@ text-shadow: 2px 2px rgba(0, 0, 0, .25);
   user-select: none;
 }
 
+#box0 {
+  background-color: #a3d2ca;
+}
+
+#box1 {
+  background-color: red;
+}
+#box2 {
+  background-color: red;
+}
+#box3 {
+  background-color: red;
+}
+#box4 {
+  background-color: red;
+}
+#box5 {
+  background-color: red;
+}
+#box6 {
+  background-color: red;
+}
+#box7 {
+  background-color: red;
+}
+#box8 {
+  background-color: red;
+}
 
 
 
