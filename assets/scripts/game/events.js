@@ -63,14 +63,14 @@ let firstPlayer = $(event.target.id)
 // console.log(event.target.id)
 let board = event.target.id
 // string concactenation putting two strings
-$('#' + board).text(currentplayer)
-
-
-if (box === '') {
-  firstPlayer = 'M'
-}
+$('#' + board).text(currentPlayer)
 
 currentPlayer === 'O' ? 'x' : 'O'
+if (box === '') {
+  currentPlayer = ''
+}
+
+
 }
 // else if (firstPlayer === "X")
 // firstPlayer = "O"
