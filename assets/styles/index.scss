@@ -1,5 +1,6 @@
 @import '~bootstrap/scss/bootstrap'; //the following styles are from the video
 
+
 .container {
   // Set container to take up 100% of the vp's height
   // to scale to the entire height
@@ -53,62 +54,76 @@ text-shadow: 2px 2px rgba(0, 0, 0, .25);
 
   user-select: none;
 }
-//
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // * {
 //   box-sizing: border-box;
 // }
 //
 // body {
-//   background-color:;
+//   background-color: lightblue;
 //   margin: auto 0;
 // }
 //
 // // use sass
+// .box-zero {
+//   width: 200px;
+//   height: 200px;
+//   background-color: yellow;
+// }
 // .box-one {
 //   width: 200px;
 //   height: 200px;
-//   background-color:
-// }
-// .box-two {
-//   width: 200px;
-//   height: 200px;
-//   background-color:
+//   background-color: blue;
 // }
 // .box-three {
 //   width: 200px;
 //   height: 200px;
-//   background-color:
+//   background-color: red;
 // }
 // .box-four {
 //   width: 200px;
 //   height: 200px;
-//   background-color:
+//   background-color: green;
 // }
 // .box-five {
 //   width: 200px;
 //   height: 200px;
-//   background-color:
+//   background-color: navy;
 // }
 // .box-six {
 //   width: 200px;
 //   height: 200px;
-//   background-color:
+//   background-color: yellow;
 // }
 // .box-seven {
 //   width: 200px;
 //   height: 200px;
-//   background-color:
+//   background-color: gray;
+//
 // }
 // .box-eight {
 //   width: 200px;
 //   height: 200px;
-//   background-color:
+//   background-color: purple;
 // }
 // .box-nine {
 //   width: 200px;
 //   height: 200px;
-//   background-color:
+//   background-color: orange;
 // }
 //
 // #game-board {
