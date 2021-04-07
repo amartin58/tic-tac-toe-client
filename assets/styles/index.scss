@@ -5,25 +5,33 @@ body {
   display: flex;
 }
 
+#sign-up {
+  display: flex;
+  text-align: center;
+}
 
 forms {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 100px;
+  // display: flex;
+  // flex-wrap: wrap;
+  margin: 100%;
 }
 
-p {
-
+hi {
+  text-align: center;
 }
+
 .container {
   // Set container to take up 100% of the vp's height
   // to scale to the entire height
   height: 100vh;
   height: 400px;
-  width: 300px;
+  width: 500px;
   display: flex;
- justify-content: center;
- margin-top: 175px;
+  margin-top: 175px;
+}
+
+.btn {
+  margin: 10px;
 }
 
 .board {
@@ -35,6 +43,9 @@ p {
   // background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSImFKKr1RuR39SorkzE9TMXW0-GheDklA5sg&usqp=CAU");
   // background-size: cover;
   // background-repeat: no-repeat;
+  // border: 2px solid black;
+  display: flex;
+  justify-content: center;
 }
 
 .box {
@@ -57,20 +68,16 @@ p {
   justify-content: center;
   // Set vertical
   align-items: center;
-
-// Set background to white, change to transparent on click of box
+  // Set background to white, change to transparent on click of box
   background-color: white;
-color: white;
+  color: white;
+  // make x and 0's larger
+  font-size: 15vh;
+  text-shadow: 2px 2px rgba(0, 0, 0, .25);
 
-// make x and 0's larger
-font-size: 15vh;
-
-text-shadow: 2px 2px rgba(0, 0, 0, .25);
-
-&:hover {
-  // background-color: lightblue;
+  &:hover {
+    // background-color: lightblue;
   }
-
   user-select: none;
 }
 
@@ -81,41 +88,34 @@ text-shadow: 2px 2px rgba(0, 0, 0, .25);
 #box1 {
   background-color: red;
 }
+
 #box2 {
-  background-color: red;
+  background-color: #a3d2ca;
 }
+
 #box3 {
   background-color: red;
 }
+
 #box4 {
-  background-color: red;
+  background-color: #a3d2ca;
 }
+
 #box5 {
   background-color: red;
 }
+
 #box6 {
-  background-color: red;
+  background-color: #a3d2ca;
 }
+
 #box7 {
   background-color: red;
 }
+
 #box8 {
-  background-color: red;
+  background-color: #a3d2ca;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // * {
 //   box-sizing: border-box;
 // }
