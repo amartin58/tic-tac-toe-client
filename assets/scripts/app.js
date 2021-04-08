@@ -15,7 +15,6 @@ $(() => {
   $('#change-password').hide()
   $('#sign-out').on('click', gameEvents.onSignOut)
   $('#sign-out').hide()
-
   $('.box').on('click', gameEvents.onBoxClick)
-  $('.box').hide()
+  // $('.box').hide()
 })

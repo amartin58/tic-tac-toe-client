@@ -54,17 +54,17 @@ const beginGame = function(data){
   })
 
 
-  // const box = function(data){
-  //   return $.ajax({
-  //     method: 'POST',
-  //     url: config.apiUrl + "/box",
-  //     data: data,
-  //     headers: {
-  //       Authorization: 'Bearer ' + store.user.token
-  //     }
-  //   })
+  const box = function(data){
+    return $.ajax({
+      method: 'POST',
+      url: config.apiUrl + "/box",
+      data: data,
+      headers: {
+        Authorization: 'Bearer ' + store.user.token
+      }
+    })
 
-// }
+}
 
     echo
 

@@ -51,30 +51,31 @@ const onBeginGame = function() {
 
 
 
-let currentPlayer = 'x'
+let currentPlayer = 'X'
 
   const onBoxClick = function(event) {
-    // event.preventDefault()
-    // selects clicked box // add .id to target specific
-    let firstPlayer = $(event.target.id)
-    // console.log(event.target.id)
+
     let board = event.target.id
-    // string concactenation putting two strings
+    // # - selects an id from the board
     $('#' + board).text(currentPlayer)
+    // console.log('board is ', currentPlayer)
 
-     if (board === 'o') {
-        currentPlayer = 'x'
-
-      if (board === 'x') {
-        currentPlayer = 'o'
-      }
+     if (currentPlayer === 'O') {
+        currentPlayer = 'X'
+    } else if (currentPlayer === 'X') {
+      currentPlayer = 'O'
     } else {
-      console.log("invalid move")
+
     }
 
 
 }
 
+// setTimeout(() => {
+//   $('#player-message').text('')
+//   $('#player-message').removeClass('success')
+// }, 5000)
+// }
 
 
 
@@ -93,118 +94,50 @@ let currentPlayer = 'x'
 
 
 
-  /**
-  currentPlayer = X
-  [X| O| X]
-  [ | | ]
-  [ | | ]
-
-
-  currentPlayer = O
-  [X| O| X]
-  [ | | ]
-  [ | | ]
-
-
-  **/
-  // console.log('this is the event log', )
-
-  // let firstMove = $(event.target.id) // box0
-  // console.log(firstMove)
-  // let board = event.target.id // box2
-  // //[ empty ] if: the box is empty -> Place Player's token
-  // // console.log(box)
-  // if (board === '') {
-  //   // <- empty
-  //   // token x or o can be placed in box;
-  //   $('#' + board).text(currentPlayer) //X
-  //   if (currentPlayer === 'O') {
-  //     currentPlayer = 'x'
-  //   }
-  //   else if (currentPlayer === 'x') {
-  //     currentPlayer = 'O'
-  //   }
-  // } else {
-  //   // <- filled
-  //   // console.log("invalid move")
-  //   // console.log(box)
-  // }
-  //[x/o] else: if the box is filled in -> console log an Error: You can't move here
-
-
-// currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
-//   // selects clicked box // add .id to target specific
-//   let firstPlayer = $(event.target.id)
-//   console.log(event.target.id)
-//   let board = event.target.id
-//   // string concactenation putting two strings
-//   $('#' + board).text(currentPlayer)
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// let currentPlayer = 'x'
+//
 // const onBoxClick = function(event) {
-// // selects clicked box // add .id to target specific
-// let firstPlayer = $(event.target.id)
-// // console.log(event.target.id)
-// let box = event.target.id
-// // string concactenation putting two strings
-//   // currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
-// $('#' + box).text(currentPlayer)
-// // if (box === '') {
-//   // <- empty
-//   currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
-  // token x or o can be placed in box;
-  // if (currentPlayer === 'O') {
-  //   currentPlayer = 'x'
-  // }
-  // else if (currentPlayer === 'x') {
-  //   currentPlayer = 'O'}
-  //
-  //   else {
-  //
-  //     console.log("invalid move")
-  //     console.log(box)}
-// }
-// }
+// console.log('this is the event log', currentPlayer)
+// // let index = event.target.id // box0
+// const box = $(event.target)// box2
+//
+// //[ empty ] if: the box is empty -> Place Player's token
+// // console.log(box)
+// // if (box === ''){
 
 
-
-
-
-
-
-
-
-// ÷ 'x' : 'O'
-
-// https://stackoverflow.com/questions/44491989/how-do-i-check-a-3x3-tictactoe-board-for-empty-spaces-what-i-have-so-far-is-not
-// return true
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  // for (i = 0; i < board.length; i++){
-  // if (currentPlayer = board[i] === ''){
-  // currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
-  // }
-  // // https://stackoverflow.com/questions/44491989/how-do-i-check-a-3x3-tictactoe-board-for-empty-spaces-what-i-have-so-far-is-not
-  // return true
-  // }
 
 
 // if (currentPlayer === "X") {
@@ -219,30 +152,166 @@ let currentPlayer = 'x'
 
 
 
-// // Video clue
-// let currentPlayer = 'x'
-//
+
+
+
+
+
+
+
+
+
+
 // const onBoxClick = function(event) {
-// // selects clicked box // add .id to target specific
-// let firstPlayer = $(event.target.id)
-// // console.log(event.target.id)
-// let board = event.target.id
-// // string concactenation putting two strings
-// $('#' + board).text(currentPlayer)
-// currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
-// for (i = 0; i < board.length; i++){
-//  if (currentPlayer = board[i] === ''){
-// currentPlayer = currentPlayer === 'O' ? 'x' : 'O'
+
+
+/**
+currentPlayer = X
+[X| O| X]
+[ | | ]
+[ | | ]
+
+
+currentPlayer = O
+[X| O| X]
+[ | | ]
+[ | | ]
+
+
+**/
+// console.log('this is the event log', event)
+// event.target.id // box0
+// let board = event.target.id // box2
+// //[ empty ] if: the box is empty -> Place Player's token
+// // console.log(box)
+// if (box === ''){ <- empty
+// // token x or o can be placed in box;
+//  $('#' + board).text(currentPlayer) //X
+//  if (currentPlayer === 'O'){
+//  currentPlayer = 'x'
+//  }
+//  if( currentPlayer === 'x'){
+//  currentPlayer = 'O'
+//  }
+// } else { <- filled
+//  console.log("invalid move")
 // }
-// // https://stackoverflow.com/questions/44491989/how-do-i-check-a-3x3-tictactoe-board-for-empty-spaces-what-i-have-so-far-is-not
-// return true
-// }
-//
-//
-// }
-//  if (currentPlayer === "X") {
+//[x/o] else: if the box is filled in -> console log an Error: You can't move here
+
+
+
+
+
+// if (currentPlayer === "X") {
 // firstPlayer =
 // }
+// if (pickSquare=== currentPlayer){
+//
+//
+// }
+// console.log(event.target)
+// const index = event.target.id
+//   $(event.target).text()
+//     if $(event.target).text(currentPlayer)
+//
+//   }
+//   if (currentPlayer === 'O')
+//     currentPlayer = 'x'
+//   }
+//    (currentPlayer === 'x'){
+//     currentPlayer = 'O'
+//
+// }
+// const onBoardClick = function () {
+//   let currentPlayer = 'playerX'
+//
+//   // const cells = $('#board div').toArray()
+//   // console.log(cells)
+//   // get the position the player chose on the board by the id attribute
+//   const index = event.target.id
+//
+//   // figure out whos turn it is
+//
+//   // use jquery to add the player to the html board
+//   $(event.target).text('X')
+//   $(event.target).off().text('No, No, No. Not Today!')
+//
+//   // then pass the index and player to the boardClick function
+//   // so it can send that data to the API
+//   api.boardClick()
+//     .then(ui.onBoardClickSuccess)
+//     .catch(ui.onError)
+// }
+
+
+
+
+
+
+
+
+
+// else {
+//   $('#player-message').text('Spot Taken!')
+//   $('#player-message').addClass('success')
+//   setTimeout(() => {
+//     $('#player-message').text('')
+//     $('#player-message').removeClass('success')
+//   }, 5000)
+// }
+
+
+
+/**
+currentPlayer = X
+[X| O| X]
+[ | | ]
+[ | | ]
+
+
+currentPlayer = O
+[X| O| X]
+[ | | ]
+[ | | ]
+
+
+**/
+// console.log('this is the event log', box.innerText)
+// let box = event.target // box0
+
+
+//   // the square choosen by the player
+//   const chooseSquare = event.target.id // box2
+//   // console.log (event.target.id)
+//   //[ empty ] if: the box is empty -> Place Player's token
+//   // console.log(box)
+//   // if (box === ''){
+//     // <- empty
+//   // token x or o can be placed in box;
+//    // $('#' + box).text(currentPlayer) //X
+//    // choosen square will enter either x or o
+// $(event.target).text(currentPlayer) {
+// console.log(chooseSqaure)
+// if $('# + box').text() === '')
+//    if (currentPlayer === 'O'){
+//    currentPlayer = 'x'
+//    }
+//    if( currentPlayer === 'x'){
+//    currentPlayer = 'O'
+//
+//   } else {
+//     // <- filled
+//    console.log("invalid move")
+//   }
+// }
+
+//[x/o] else: if the box is filled in -> console log an Error: You can't move here
+
+
+
+
+
+
 
 
 

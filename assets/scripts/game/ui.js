@@ -47,7 +47,7 @@ const onSignOutSuccess = function () {
   $('#change-password').hide()
   $('#sign-out').hide()
   $('#beginGame').hide()
-  $('.box').hide()
+  // $('.box').hide()
 }
 
 const onSignOutFailure = function () {

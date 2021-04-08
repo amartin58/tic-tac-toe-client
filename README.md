@@ -20,9 +20,12 @@ Game will notify when the game ends in a tie
 
 When game is over the board will be cleared
 
-when game is over user will be allowed to start a new Game
+When game is over user will be allowed to start a new game
 
 ___
 
 
-![gameTemplate](https://imgur.com/LrCHgL5)
+![gameTemplate](https://i.imgur.com/LrCHgL5.jpg)
+
+
+![linkToGitHubRepo](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
