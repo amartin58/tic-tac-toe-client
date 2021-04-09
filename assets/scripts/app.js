@@ -11,10 +11,11 @@ $(() => {
   $('#sign-in').on('submit', gameEvents.onSignIn)
   $('#beginGame').on('click', gameEvents.onBeginGame)
   $('#beginGame').hide()
-  $('#change-password').on('click', gameEvents.onChangePassword)
-  $('#change-password').hide()
+    // $('#beginGame').trigger('reset')
   $('#sign-out').on('click', gameEvents.onSignOut)
   $('#sign-out').hide()
   $('.box').on('click', gameEvents.onBoxClick)
-  $('.box').hide()
+
+  // $('.box').hide()
 })
+// start a new game

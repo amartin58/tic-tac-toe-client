@@ -16,43 +16,37 @@
 <body>
 
 
-<container>
+  <container>
 
-<h1>Tic Tac Toe</h1><br />
+    <h1>Tic Tac Toe</h1><br />
 
-  <section id="all-forms">
-    <p id="message" </p>
-    <form id="sign-up">
-      <input class="col-3" required name="credentials[email]" type="email" value="Email">
-      <input class="col-3" required name="credentials[password]" type="password" value="Enter password">
-      <input class-"col-3" required name="credentials[password_confirmation]" type="password" value="Accepted">
-      <input class="col-3" type="submit" value="<= Sign-Up">
-    </form>
+    <section id="all-forms">
+      <p id="message"></p>
+      <form id="sign-up">
+        <input class="col-3" required name="credentials[email]" type="email" value="Email">
+        <input class="col-3" required name="credentials[password]" type="password" value="Enter password">
+        <input class-"col-3" required name="credentials[password_confirmation]" type="password" value="Accepted">
+        <input class="col-3" type="submit" value="<= Sign-Up">
+      </form>
 
-    <form id="sign-in">
-      <input class="col-3"required name="credentials[email]" type="email" value="Email">
-      <input class="col-3"required name="credentials[password]" type="password" value="Password">
-      <input class="col-3"type="submit" value="<= Sign In">
-    </form>
+      <form id="sign-in">
+        <input class="col-3" required name="credentials[email]" type="email" value="Email">
+        <input class="col-3" required name="credentials[password]" type="password" value="Password">
+        <input class="col-3" type="submit" value="<= Sign In">
+      </form>
 
-    <form id="change-password">
-      <input class="col-3"required name="passwords[old]" type="password" value="Old Password">
-      <input class="col-3"required name="passwords[new]" type="password" value="New Password">
-      <input class="col-3"type="submit" value="<= Change Password">
-    </form>
+      <form>
+        <button id="beginGame" type="button" class="btn btn-primary">New Game</button>
+      </form>
 
-    <form>
-      <button id="beginGame" type="button" class="btn btn-primary">New Game</button>
-    </form>
+      <form>
+        <button id="sign-out" type="button" class="btn btn-primary">Sign Out</button>
+      </form>
 
-    <form>
-      <button id="sign-out" type="button" class="btn btn-primary">Sign Out</button>
-    </form>
-
-</container>
+  </container>
 
   </section>
-
+  <p id="next-turn"></p>
   <section class="container">
 
     <div class="row h-100" id="board">

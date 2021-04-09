@@ -29,16 +29,6 @@ const onSignInFailure = function () {
   $('#message').text('Sign in was not successful. Please try again')
 }
 
-const onChangePasswordSuccess = function () {
-  $('#message').text('Password successfully deleted')
-  $('#change-password').trigger('reset')
-  // console.log(onSignInSuccess)
-}
-
-const onChangePasswordFailure = function () {
-  $('#message').text('Delete failed. Please retry')
-}
-
 const onSignOutSuccess = function () {
   $('#message').text('You have logged out')
   $('#sign-out').trigger('reset')
@@ -46,7 +36,7 @@ const onSignOutSuccess = function () {
   $('#sign-in').show()
   $('#change-password').hide()
   $('#sign-out').hide()
-  $('#beginGame').hide()
+  // $('#beginGame').hide()
   // $('.box').hide()
 }
 
@@ -58,7 +48,9 @@ const onBeginGameSuccess = function (data) {
   store.game = data.game
   $('#message').text('You are ready to play')
   // $('#beginGame').trigger('reset')
-  $('.box').show()
+    $('.box').show()
+
+
 }
 
 const onBeginGameFailure = function () {
@@ -66,9 +58,10 @@ const onBeginGameFailure = function () {
 }
 
 const onBoxClickSuccess = function (data) {
-  $('#message').text('It is your move')
-  $('.boxclick').trigger('reset')
   store.user = data.user
+  $('#message').text('It is your move')
+  // $('.boxclick').trigger('reset')
+
 }
 
 const onBoxClickFailure = function () {
@@ -82,8 +75,6 @@ module.exports = {
   onSignUpFailure,
   onSignInSuccess,
   onSignInFailure,
-  onChangePasswordSuccess,
-  onChangePasswordFailure,
   onSignOutSuccess,
   onSignOutFailure,
   onBeginGameSuccess,
