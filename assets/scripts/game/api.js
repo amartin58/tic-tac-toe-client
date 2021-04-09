@@ -58,5 +58,5 @@ module.exports = {
   signUp,
   signIn,
   signOut,
-  beginGame
+  beginGame,
 }

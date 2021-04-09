@@ -36,10 +36,9 @@ const onSignOutSuccess = function () {
   $('#sign-out').trigger('reset')
   $('#sign-up').show()
   $('#sign-in').show()
-  $('#change-password').hide()
   $('#sign-out').hide()
   // $('#beginGame').trigger('reset')
-  $('.box').trigger('reset')
+  // $('.box').trigger('reset')
   $('#beginGame').hide()
   $('.box').hide()
   $('#board').hide()
@@ -52,9 +51,8 @@ const onSignOutFailure = function () {
 const onBeginGameSuccess = function (data) {
   store.game = data.game
   $('#message').text('Player one\'s move')
-
     $('.box').show()
-
+// $('#beginGame').trigger('reset')
 
 }
 
@@ -65,7 +63,7 @@ const onBeginGameFailure = function () {
 const onBoxClickSuccess = function (data) {
   store.user = data.user
   $('#message').text('It is your move')
-  $('.boxclick').trigger('reset')
+  // $('.boxclick').trigger('reset')
   // $('#beginGame').trigger('reset')
 
 }
