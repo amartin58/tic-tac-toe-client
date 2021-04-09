@@ -43,6 +43,7 @@ const onSignOut = function() {
 
 const onBeginGame = function() {
   event.preventDefault()
+
   api.beginGame()
     .then(ui.onBeginGameSuccess)
     .catch(ui.onBeginGameFailure)
@@ -52,6 +53,7 @@ let currentPlayer = 'X'
 const onBoxClick = function(event) {
 
     const board = event.target.id
+
     // # - selects an id from the board
     if ($('#' + board).text() === '') {
       $('#' + board).text(currentPlayer)
@@ -59,24 +61,24 @@ const onBoxClick = function(event) {
       if (currentPlayer === 'O') {
         currentPlayer = 'X'
         $('#next-turn').text('Player 1\'s turn')
-      } else if (currentPlayer === 'X') {
+      } else if  (currentPlayer === 'X'){
         currentPlayer = 'O'
         $('#next-turn').text('Player 2\'s turn')
-      } else { (currentPlayer === 'X' && currentPlayer === 'O')
-      // alert ('#next-turn').text('Invalid move')
-alert ('Hi')
-    }setTimeout(() => {
-        $('#next-turn').text('')
-      }, 10000)
+      }
+    } else {
+$('#next-turn').text('You can\'t do that!')
     }
-}
+  }
+// alert('Hi')
+//     }setTimeout(() => {
+//         $('#next-turn').text('')
+//       }, 10000)
+
 
 
     //     .then(ui.onBoardClickSuccess)
     //     .catch(ui.onError)
     // }
-
-
 
 
     module.exports = {
