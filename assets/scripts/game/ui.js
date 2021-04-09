@@ -18,11 +18,13 @@ const onSignInSuccess = function (response) {
   store.user = response.user
   $('#message').text(response.user.email + ' You are signed in. You can begin playing')
   $('#sign-in').trigger('reset')
-  $('#change-password').show()
+
   $('#sign-up').hide()
   $('#sign-in').hide()
   $('#beginGame').show()
+  $('#beginGame').trigger('reset')
   $('#sign-out').show()
+  $('#board').show()
 }
 
 const onSignInFailure = function () {
@@ -36,8 +38,11 @@ const onSignOutSuccess = function () {
   $('#sign-in').show()
   $('#change-password').hide()
   $('#sign-out').hide()
-  // $('#beginGame').hide()
-  // $('.box').hide()
+  // $('#beginGame').trigger('reset')
+  $('.box').trigger('reset')
+  $('#beginGame').hide()
+  $('.box').hide()
+  $('#board').hide()
 }
 
 const onSignOutFailure = function () {
@@ -46,8 +51,8 @@ const onSignOutFailure = function () {
 
 const onBeginGameSuccess = function (data) {
   store.game = data.game
-  $('#message').text('You are ready to play')
-  // $('#beginGame').trigger('reset')
+  $('#message').text('Player one\'s move')
+
     $('.box').show()
 
 
@@ -60,7 +65,8 @@ const onBeginGameFailure = function () {
 const onBoxClickSuccess = function (data) {
   store.user = data.user
   $('#message').text('It is your move')
-  // $('.boxclick').trigger('reset')
+  $('.boxclick').trigger('reset')
+  // $('#beginGame').trigger('reset')
 
 }
 

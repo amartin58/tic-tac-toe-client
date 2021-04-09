@@ -43,9 +43,6 @@ const onSignOut = function() {
 
 const onBeginGame = function() {
   event.preventDefault()
-  // fuction (){
-  //   console.log
-  // }
   api.beginGame()
     .then(ui.onBeginGameSuccess)
     .catch(ui.onBeginGameFailure)
